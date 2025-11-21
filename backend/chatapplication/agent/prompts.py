@@ -1,5 +1,4 @@
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.messages import AIMessages, HumanMessage, BaseMessage, ToolMessage
 
 prompt = ChatPromptTemplate.from_messages([
     ("system", (
