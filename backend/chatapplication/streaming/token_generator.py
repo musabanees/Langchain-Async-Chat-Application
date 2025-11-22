@@ -1,5 +1,5 @@
 import asyncio
-from langchain.callbacks.base import AsyncCallbackHandler
+from langchain_core.callbacks.base import AsyncCallbackHandler
 
 from chatapplication.agent.executor import agent_executor
 
