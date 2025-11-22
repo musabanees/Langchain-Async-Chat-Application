@@ -2,15 +2,10 @@ from langchain_core.tools import tool
 from langchain_core.messages import ToolMessage, AIMessage
 
 from pydantic import BaseModel, SecretStr
-
-import asyncio
 import aiohttp
 import os
 
-# Constants and Configuration
-OPENAI_API_KEY = SecretStr(os.environ["OPENAI_API_KEY"])
 SERPAPI_API_KEY = SecretStr(os.environ["SERPAPI_API_KEY"])
-
 
 class Article(BaseModel):
     title: str
