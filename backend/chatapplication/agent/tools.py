@@ -3,8 +3,10 @@ from langchain_core.messages import ToolMessage, AIMessage
 
 from pydantic import BaseModel, SecretStr
 import aiohttp
+from dotenv import load_dotenv
 import os
 
+load_dotenv()
 SERPAPI_API_KEY = SecretStr(os.environ["SERPAPI_API_KEY"])
 
 class Article(BaseModel):

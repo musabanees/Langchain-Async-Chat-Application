@@ -1,6 +1,7 @@
 
 import asyncio
-from chatapplication.streaming.token_generator import QueueCallbackHandler, token_generator
+from chatapplication.streaming.callbacks import QueueCallbackHandler
+from chatapplication.streaming.token_generator import token_generator
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -17,7 +18,7 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-@app.invoke("/invoke")
+@app.post("/invoke")
 async def invoke(content: str):
     queue: asyncio.Queue = asyncio.Queue()
     streamer = QueueCallbackHandler(queue)

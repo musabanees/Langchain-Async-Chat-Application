@@ -4,7 +4,7 @@ from langchain_core.messages import BaseMessage, ToolMessage, AIMessage, HumanMe
 
 from chatapplication.agent.prompts import AgentPrompts
 from chatapplication.agent.tools import add, subtract, multiply, exponentiate, serpapi, final_answer, execute_tool
-from chatapplication.streaming.token_generator import QueueCallbackHandler
+from chatapplication.streaming.callbacks import QueueCallbackHandler
 
 from pydantic import SecretStr
 import asyncio
